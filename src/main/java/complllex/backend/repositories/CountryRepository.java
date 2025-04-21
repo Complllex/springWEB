@@ -4,7 +4,7 @@ import org.springframework.stereotype.Repository;
 import complllex.backend.models.Country;
 
 @Repository
-public interface CountryRepository  extends JpaRepository<Country, Long>
+public interface CountryRepository  extends JpaRepository<Country, Integer>
 {
 
 }
