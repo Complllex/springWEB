@@ -43,7 +43,7 @@ public class LoginController {
         return new ResponseEntity<Object>(HttpStatus.UNAUTHORIZED);
     }
 
-    @GetMapping("/logout")
+    @PostMapping("/logout")
     public ResponseEntity logout(@RequestHeader(value = "Authorization", required = false) String token) {
         if (token != null && !token.isEmpty()) {
             token = StringUtils.removeStart(token, "Bearer").trim();
